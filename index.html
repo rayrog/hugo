@@ -1,0 +1,64 @@
+<!DOCTYPE html >
+<html lang="en">
+
+<head>
+
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <title>QuestionApp </title>
+
+    <!--  JQUERY-->
+  <script src="http://code.jquery.com/jquery-3.1.1.min.js" ></script>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <!-- Custom JS -->
+  <script type="text/javascript" src="js/custom.js"></script>
+
+  <!-- BOOTSTRAP: Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- BOOTSTRAP: Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+  <!-- BOOTSTRAP: Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+  <header>
+    <!-- Menu -->
+    <nav>
+      <ul id="menu">
+        <li><a href="index.html" class="menu-item">Accueil</a></li>
+        <li><a href="creation.html" class="menu-item">Create questionnaire</a></li>
+        <li><a href="answers.html" class="menu-item">View answers</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Connection Section -->
+  <div id="login">
+    <h1>Sign in</h1>
+    <!-- TODO: link with another ressource -->
+    <form id="form_login" action="" method="post">
+      <label for="id_user">Nom d'utilisateur :</label>
+      <input id="id_user" name="id_user" type="text" placeholder="Jean" required>
+      <label for="pass_user">Mot de passe :</label>
+      <input id="pass_user" name="pass_user" type="password" placeholder="***********" required>
+      <input type="submit" value="Connexion">
+    </form>
+  </div>
+
+
+  <!-- Questionnaires Consultation -->
+  <div id="view_questionnaires">
+    <h1>Consult questionnaires</h1>
+    <p>No questionnaire for the moment</p>
+  </div>
+  <footer id="contact"> &#169;opyright 2017 Rayan ROGAI - rayan.rogai@cpe.fr</footer>
+</body>
+
+</html>

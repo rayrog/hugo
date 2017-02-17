@@ -1,0 +1,85 @@
+<!DOCTYPE html >
+<html lang="en">
+
+<head>
+
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <title>QuestionApp | Creation</title>
+  <!--  JQUERY-->
+  <script src="http://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <!-- Custom JS -->
+  <script type="text/javascript" src="js/custom.js"></script>
+
+  <!-- BOOTSTRAP: Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- BOOTSTRAP: Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+  <!-- BOOTSTRAP: Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+  <header>
+    <!-- Menu -->
+    <nav>
+      <ul id="menu">
+        <li><a href="index.html" class="menu-item">Accueil</a></li>
+        <li><a href="creation.html" class="menu-item">Create questionnaire</a></li>
+        <li><a href="answers.html" class="menu-item">View answers</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!--  Questionnaire creation -->
+  
+  <table id="create_questionnaire">
+    <tr id="ligne1">
+      <td>
+        <label for="question1">Question : </label>
+      </td>
+      <td>
+        <input type="text" id="question1" class="form-control">
+      </td>
+      <td>
+        <button class="btn del" onClick='deleteRow(1)' value="1" >Delete</button>
+      </td>
+    </tr>
+  </table>
+
+  <!--  Tools to manage questionnaire creation-->
+  <div class="tools">
+    <button id="add_question" class="tool-button"><span class="glyphicon glyphicon-plus"></span></button>
+    <button id="preview" class="tool-button"><span class="glyphicon glyphicon-eye-open"></span></button>
+    <button id="save" class="tool-button"><span class="glyphicon glyphicon-floppy-disk"></span></button>
+  </div>
+
+  <!-- Preview page -->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <form action="">
+       <fieldset>
+         <legend>Preview of your questionnaire:</legend>
+                 <table id="table_preview">
+                   <tr>
+                     <td><label for="email_user">Enter your email :</label></td>
+                     <td><input type="text" id="prev_qestion1" class="form-control" required></td>
+                   </tr>
+                 </table>
+       </fieldset>
+      </form>
+    </div>
+
+  </div>
+  <footer id="contact"> &#169;opyright 2017 Rayan ROGAI - rayan.rogai@cpe.fr</footer>
+</body>
+
+</html>
