@@ -39,47 +39,62 @@
   </header>
 
   <!--  Questionnaire creation -->
-  
-  <table id="create_questionnaire">
-    <tr id="ligne1">
-      <td>
-        <label for="question1">Question : </label>
-      </td>
-      <td>
-        <input type="text" id="question1" class="form-control">
-      </td>
-      <td>
-        <button class="btn del" onClick='deleteRow(1)' value="1" >Delete</button>
-      </td>
-    </tr>
-  </table>
+  <div class="container text-center">
+    <form action="save.php" method="post" id="form-data">
+      <div class="alert alert-danger" id="alert"></div>
+      <table id="create_questionnaire">
+        <tr>
+          <td>
+            <label for="questionnaire_name">Questionnaire name :</label>
+          </td>
+          <td>
+            <input type="text" id="questionnaire_name" class="form-control" required>
+          </td>
+        </tr>
+        <tr id="ligne1">
+          <td>
+            <label for="question1">Question : </label>
+          </td>
+          <td>
+            <input type="text" id="question1" name="question1" class="form-control">
+          </td>
+          <td>
+            <button class="btn del" onClick='deleteRow(1)' value="1"><span class="glyphicon glyphicon-trash"></span> Delete</button>
+          </td>
+        </tr>
+      </table>
+    </form>
 
-  <!--  Tools to manage questionnaire creation-->
-  <div class="tools">
-    <button id="add_question" class="tool-button"><span class="glyphicon glyphicon-plus"></span></button>
-    <button id="preview" class="tool-button"><span class="glyphicon glyphicon-eye-open"></span></button>
-    <button id="save" class="tool-button"><span class="glyphicon glyphicon-floppy-disk"></span></button>
-  </div>
 
-  <!-- Preview page -->
-  <div id="myModal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <form action="">
-       <fieldset>
-         <legend>Preview of your questionnaire:</legend>
-                 <table id="table_preview">
-                   <tr>
-                     <td><label for="email_user">Enter your email :</label></td>
-                     <td><input type="text" id="prev_qestion1" class="form-control" required></td>
-                   </tr>
-                 </table>
-       </fieldset>
-      </form>
+    <!--  Tools to manage questionnaire creation-->
+    <div class="tools">
+      <button id="add_question" class="tool-button" accesskey="+"><span class="glyphicon glyphicon-plus"></span></button>
+      <button id="preview" class="tool-button"><span class="glyphicon glyphicon-eye-open"></span></button>
+      <button id="sauve" class="tool-button"><span class="glyphicon glyphicon-floppy-disk"></span></button>
     </div>
 
+    <!-- Preview page -->
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <fieldset id="my-form">
+          <legend id="legend"></legend>
+          <form action="">
+            <table id="table_preview">
+              <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+              </tr>
+            </table>
+          </form>
+        </fieldset>
+
+      </div>
+
+    </div>
+
+    <footer id="contact"> &#169;opyright 2017 Rayan ROGAI - rayan.rogai@cpe.fr</footer>
   </div>
-  <footer id="contact"> &#169;opyright 2017 Rayan ROGAI - rayan.rogai@cpe.fr</footer>
 </body>
 
 </html>

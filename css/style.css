@@ -10,10 +10,14 @@ ul{
 #menu li {
   display: inline;
   margin: 2vh;
-}
-
+} 
 .del {
   background: rgba(249, 110, 110, 0.75);
+}
+
+.submit {
+  background: rgba(0, 98, 255, 0.81);
+  color: white;
 }
 
 table {
@@ -28,6 +32,9 @@ table {
   background: rgb(80, 150, 208);
 }
 
+table{
+  margin: auto;
+}
 /*    --------------------------------------------------
 	:: Modal preview
 	-------------------------------------------------- */
@@ -70,6 +77,5 @@ table {
     cursor: pointer;
 }
 
-#table_preview{
-  margin: auto;
-}
+
+
