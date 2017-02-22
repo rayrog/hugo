@@ -1,0 +1,26 @@
+site:
+  build: site
+  ports :
+   - "80:80"
+  volumes:
+   - /home/debian/hugo/site:/var/www/html/
+  links:
+   - database
+phpmyadmin:
+   image: corbinu/docker-phpmyadmin
+   ports :
+    - "8080:80"
+   environment:
+    - MYSQL_USERNAME=root
+    - MYSQL_PASSWORD=Azertyuiop@1
+   links:
+    - database:mysql
+database:
+  image: mysql:5.5
+  ports:
+   - "3306:3306"  
+  environment:
+     - MYSQL_ROOT_PASSWORD=Azertyuiop@1
+     - MYSQL_DATABASE=hugo
+     - MYSQL_USER=user
+     - MYSQL_PASSWORD=azerty@1
