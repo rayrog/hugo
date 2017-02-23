@@ -12,13 +12,15 @@ try {
   echo "<h1>There was an error with the connection :</h1><br> ".$e;
 }
 
-// recover data 
+// recover data posted
+$array = array();
+$questionnaire_name = $_POST["questionnaire_name"];
 
- $array = array();
-
+echo $questionnaire_name;
 foreach ($_POST as $key=>$value){
   if(startsWith($key, "question")){
     $array[] = $_POST[$key];
+    
   }
 }
  
@@ -34,25 +36,6 @@ try{
 } catch (PDOException $e){
   echo "Can't fetch objects";
 }
-//// set parameters and execute
-//$firstname = "John";
-//$lastname = "Doe";
-//$email = "john@example.com";
-//$stmt->execute();
-//
-//$firstname = "Mar";
-//$lastname = "Moe";
-//$email = "mary@example.com";
-//$stmt->execute();
-//
-//$firstname = "Julie";
-//$lastname = "Dooley";
-//$email = "julie@example.com";
-//$stmt->execute();
-//
-//echo "New records created successfully";
-//
-
 
 
 /* Utils */
